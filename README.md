@@ -1,11 +1,11 @@
-# Elara 4090
+# Elara 4088
 
 [![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![rank](https://make.fun/badge/tiny-chess-01/ren-elara/makefun-entry-01/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/ren-elara/makefun-entry-01/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
 A deterministic Python 3.13 chess engine written from scratch in one recorded
-agent session. The standalone main.py is 4,090 bytes, including the official
+agent session. The standalone main.py is 4,088 bytes, including the official
 make.fun LZMA/Latin-1 unpacker. Only Python's standard library is used.
 
 ## Run it
@@ -30,7 +30,7 @@ check extensions, late move reductions, reverse futility, quiescence, MVV-LVA,
 and killers. A bounded 16,384-slot transposition table includes reversible-history
 context. Evaluation uses all published PeSTO middlegame/endgame values, tapered
 by material, plus bishop pairs and passed pawns. The PeSTO endgame king table
-encourages king activity. A bounded pawn cache avoids repeated calculations.
+encourages king activity. Precomputed move rays and a bounded incremental pawn-hash cache avoid repeated work.
 
 Only main.py, README.md, LICENSE, and .makefun/owner.json are committed.
 The new engine_new.py and test_new.py remain local; the official transcript
